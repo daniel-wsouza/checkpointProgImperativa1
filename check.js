@@ -20,26 +20,36 @@ com seus respectivos tempos pré-definidos.
 - No final de cada tarefa, o microondas deverá exibir a mensagem: "Prato pronto, bom apetite!!!".
 */
 
-function Microondas(tipoComida, tempoSelecionado) {
+function Microondas(NumeroTipoComida, tempoSelecionado) {
     let mensagem = 'CheckPoint I \n';
 
-    switch(tipoComida) {
-        case 'Pipoca' :
+    switch(NumeroTipoComida) {
+        case 1 :
             mensagem += 'Você selecionou o tipo de comida Pipoca\n';
+
+
 
             if (tempoSelecionado >= 30) {
                 mensagem += 'kabumm\n';
             }
-                 if (tempoSelecionado > 20  ) {
+         
+
+                 if (tempoSelecionado > 20 && tempoSelecionado <30 ) {
                     mensagem += 'Sua comida queimou\n';
             }
+        ;
+
             if (tempoSelecionado < 10 ) {
                 mensagem += 'tempo insuficiente\n';
         }
+ 
+        ;
+
         if (tempoSelecionado = 10 ) {
             mensagem += 'Prato pronto, bom apetite!!!\n';
     }
-        break;
+    break;
+
     }
 
     mensagem += msgPadrao();    
@@ -50,4 +60,4 @@ function Microondas(tipoComida, tempoSelecionado) {
 function msgPadrao() {
     return 'Obrigado!\n';
 }
-console.log(Microondas('Pipoca', 22));
+console.log(Microondas(1, 10));
